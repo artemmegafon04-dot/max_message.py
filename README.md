@@ -26,7 +26,7 @@ class MaxMessageModule(loader.Module):
 
         await utils.answer(
             message,
-            f"X {dynamic_text}\nСообщение не поддерживается мессенджером Telegram. Пожалуйста, установите мессенджер Max.",
+            f"{dynamic_text}\nСообщение не поддерживается мессенджером Telegram. Пожалуйста, установите мессенджер Max.", # ВОТ ТУТ УБРАЛ "X "
             reply_markup={"text": "Скачать Max", "url": "https://play.google.com/store/apps/details?id=ru.oneme.app"}
         )
         logger.info(f"Команда .maxmsg выполнена для сообщения {message.id}")
